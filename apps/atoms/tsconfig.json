@@ -1,0 +1,24 @@
+{
+    "extends": "@surikmr1/tsconfig/react-library.json",
+    "display": "Atoms",
+    "compilerOptions": {
+        "outDir": "dist",
+        "target": "ES5",
+        // "baseUrl": "src",
+        // "rootDir": "./",
+        "module": "CommonJS",
+        "lib": ["ES5","DOM"],
+        "jsx": "react",
+        "sourceMap": true,
+        "noEmit": false,
+        "esModuleInterop": true,
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.js",
+        "src/**/*.jsx",
+    ],
+    "exclude": ["node_modules"]
+  }

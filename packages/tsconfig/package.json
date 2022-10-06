@@ -1,10 +1,13 @@
 {
-  "name": "tsconfig",
-  "version": "0.0.0",
+  "name": "@surikmr1/tsconfig",
+  "version": "2.0.0",
   "private": true,
   "files": [
     "base.json",
     "nextjs.json",
     "react-library.json"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
