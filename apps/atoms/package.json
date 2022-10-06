@@ -42,6 +42,7 @@
     "prebuild": "rimraf dist && rimraf dist-esm && rimraf lib",
     "build": "tsc && webpack --mode production",
     "lint": "eslint --fix \"./src/**/*.{ts,tsx,jsx,json}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "build:e": "tsc && tsc -m es6 --outDir dist-esm && webpack --mode production"
   }
 }
