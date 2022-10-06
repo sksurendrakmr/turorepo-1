@@ -22,8 +22,8 @@
       'plugin:import/typescript',
       'plugin:jsx-a11y/recommended',
       'plugin:eslint-comments/recommended',
-    //   'prettier/@typescript-eslint',
-    //   'plugin:prettier/recommended',
+      'prettier/@typescript-eslint',
+      'plugin:prettier/recommended',
     ],
     rules: {
       'no-unused-vars': 'off',
@@ -34,5 +34,21 @@
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
     },
+    overrides: [
+      {
+        // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+        env: {
+          jest: true,
+        },
+        files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+        extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+        rules: {
+          'import/no-extraneous-dependencies': [
+            'off',
+            { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+          ],
+        },
+      },
+    ],
     ignorePatterns: ['**/*.js', 'node_modules', '.turbo', 'dist', 'coverage'],
 }

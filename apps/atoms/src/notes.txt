@@ -1,0 +1,4 @@
+yarn add -D -W jest @types/jest @testing-library/jest-dom @testing-library/react @testing-library/react-hooks @testing-library/user-event esbuild esbuild-jest identity-obj-proxy
+
+
+yarn add -D eslint-plugin-jest eslint-plugin-jest-dom eslint-plugin-testing-library
